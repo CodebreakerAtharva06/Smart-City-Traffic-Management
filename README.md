@@ -85,7 +85,12 @@ Open the project in your Java IDE (e.g., IntelliJ, Eclipse).
 
 Make sure Apache Spark (3.5.4 recommended )is installed and configured.
 
-package name should be example
+
+📁 Project Structure
+All Java files should follow this directory structure:
+
+src/main/java/example/
+
 
 
 Run the HomePage.java file to launch the JavaFX GUI.
