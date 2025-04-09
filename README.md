@@ -34,7 +34,7 @@ Dates and Time
 
 🛠️ Tech Stack
 Component	Technology
-Frontend	JavaFX (JDK 21, JavaFX 23.0.2)
+Frontend	JavaFX (JDK 17, JavaFX 17.0.14)
 Backend	Apache Spark
 ML Models	Linear & Logistic Regression
 Language	Java
@@ -81,15 +81,12 @@ Time Slot (if applicable)
 🚀 How to Run
 Clone the repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/smart-city-traffic-management.git
 Open the project in your Java IDE (e.g., IntelliJ, Eclipse).
 
-Make sure Apache Spark is installed and configured.
+Make sure Apache Spark (3.5.4 recommended )is installed and configured.
 
-Run the Main.java file to launch the JavaFX GUI.
+package name should be example
+Run the HomePage.java file to launch the JavaFX GUI.
 
 📌 Future Scope
 Add real-time traffic updates using IoT sensors or APIs
