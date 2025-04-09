@@ -2,17 +2,17 @@
 # Project Requirements
 # ===================================
 
-Project Name: Smart City Traffic Management
-Author: Atharva Bhople
-Last Updated: April 2025
+Project Name: Smart City Traffic Management  
+Author: Atharva Bhople  
+Last Updated: April 2025  
 
 # -----------------------------------
 # 🔧 Hardware Requirements
 # -----------------------------------
-- CPU: Intel i5/Ryzen 5 or better
+- CPU: Intel i5 / AMD Ryzen 5 or better
 - RAM: Minimum 8 GB (Recommended: 16 GB)
-- Storage: At least 1 GB free disk space
-- GPU: Optional, required only for ML workloads (NVIDIA with CUDA preferred)
+- Storage: At least 1 GB of free disk space
+- GPU: Optional (Required only for ML workloads; NVIDIA GPU with CUDA preferred)
 
 # -----------------------------------
 # 💻 Software Requirements
@@ -22,53 +22,54 @@ Last Updated: April 2025
 - JavaFX SDK: 17.0.14
 - Apache Spark: 3.5.4
 - Git (for version control)
+- (Optional) Python 3.10+ for ML modules
 
 # -----------------------------------
 # 📦 Java Libraries / Frameworks
 # -----------------------------------
-- JavaFX 17.0.14 (UI Framework)
-- Apache Spark 3.5.4 (Big Data Processing)
-
+- JavaFX 17.0.14 (for GUI development)
+- Apache Spark 3.5.4 (for distributed data processing)
 
 # -----------------------------------
 # 🛠 Development Tools
 # -----------------------------------
 - IDEs:
-  - IntelliJ IDEA (with JavaFX plugin)
-  - VS Code / Eclipse (if preferred)
-- JavaFX SceneBuilder (for GUI design)
+  - IntelliJ IDEA (recommended, with JavaFX plugin)
+  - VS Code / Eclipse (alternative options)
+- JavaFX SceneBuilder (for designing GUIs visually)
 - Spark installation directory added to PATH
 - JAVA_HOME environment variable set to JDK 17
 
 # -----------------------------------
 # 🚀 Setup Instructions (Java)
 # -----------------------------------
-1. Install Java JDK 17 or JRE 17
-2. Download JavaFX SDK 17.0.14 and configure in IDE:
-   - Add to `--module-path` and `--add-modules javafx.controls,javafx.fxml`
-3. Install Apache Spark 3.5.4:
-   - Set `SPARK_HOME` and add `$SPARK_HOME/bin` to PATH
-4. (Optional) Install Python and create a virtual environment:
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
+
+1. Install **JDK 17** or **JRE 17**
+2. Download **JavaFX SDK 17.0.14** and configure in your IDE:
+   - Add JavaFX JARs to the **classpath**
+   - Use VM arguments listed below
+3. Download and configure **Apache Spark 3.5.4**:
+   - Set the `SPARK_HOME` environment variable
+   - Add `$SPARK_HOME/bin` (or `D:\path\to\spark\bin`) to PATH
+   - Add Spark JARs to the **classpath** when compiling/running Java code
+4. (Optional) For Python-based ML:
+   - Create a virtual environment:
+     ```
+     python -m venv venv
+     source venv/bin/activate   # (Linux/macOS)
+     venv\Scripts\activate      # (Windows)
+     ```
+   - Install Python dependencies via `requirements.txt`
 
 # -----------------------------------
-# 📎 Notes
+# ☕ Required VM Arguments (JavaFX)
 # -----------------------------------
-- JavaFX modules must be explicitly added at compile and run time
-- For PySpark, Java 17 compatibility with Spark 3.5.4 is confirmed
-- SceneBuilder helps design JavaFX GUIs visually
 
-
-#------------------------------------
-# Required VM Arguments
-#------------------------------------
-
---module-path "D:\3rd year\6th sem\MPJ\JavaFX\javafx-sdk-17.0.14\lib"           # Path where the JavaFx jars are available
---add-modules javafx.controls,javafx.fxml
---add-opens=java.base/sun.nio.ch=ALL-UNNAMED
---add-exports=java.base/sun.util.calendar=ALL-UNNAMED
---add-opens=java.base/java.nio=ALL-UNNAMED
---add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+```txt
+--module-path "D:\3rd year\6th sem\MPJ\JavaFX\javafx-sdk-17.0.14\lib" ^
+--add-modules javafx.controls,javafx.fxml ^
+--add-opens=java.base/sun.nio.ch=ALL-UNNAMED ^
+--add-exports=java.base/sun.util.calendar=ALL-UNNAMED ^
+--add-opens=java.base/java.nio=ALL-UNNAMED ^
+--add-opens=java.base/java.lang.invoke=ALL-UNNAMED ^
 --add-opens=java.base/java.util=ALL-UNNAMED
